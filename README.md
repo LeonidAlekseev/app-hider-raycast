@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="extension-icon.png" width="128" height="128" alt="App Hider icon">
+  <img src="assets/extension-icon.png" width="128" height="128" alt="App Hider icon">
 </p>
 
 <h1 align="center">App Hider for Raycast</h1>
@@ -20,7 +20,7 @@
 App Hider moves selected `.app` bundles out of `/Applications` into a hidden, Spotlight-excluded folder in your home Library. It also removes them from LaunchServices and refreshes Launchpad. You can still launch hidden apps from Raycast, and restore them to their original location at any time.
 
 <p align="center">
-  <img src="assets/screenshot.png" width="760" alt="Manage Hidden Apps command in Raycast">
+  <img src="media/screenshot.png" width="760" alt="Manage Hidden Apps command in Raycast">
 </p>
 
 > [!IMPORTANT]
@@ -50,6 +50,12 @@ App Hider moves selected `.app` bundles out of `/Applications` into a hidden, Sp
 - 🧹 Detects hidden apps that were deleted or moved manually and lets you clean up their records
 
 ## Installation
+
+### From the Raycast Store
+
+Open Raycast, run **Store**, search for **App Hider** and press <kbd>↵</kbd> to install.
+
+### From source
 
 **Requirements:** [Raycast](https://raycast.com) and [Node.js](https://nodejs.org) 22 or newer.
 
@@ -153,7 +159,7 @@ npm run lint      # lint with Raycast rules
 npm run fix-lint  # auto-fix lint issues
 ```
 
-All logic lives in [`src/manage-apps.tsx`](src/manage-apps.tsx).
+All logic lives in [`src/manage-apps.tsx`](src/manage-apps.tsx). The icon source is [`media/extension-icon.svg`](media/extension-icon.svg); export it to `assets/extension-icon.png` at 512×512.
 
 ## License
 

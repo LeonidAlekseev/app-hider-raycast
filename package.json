@@ -4,7 +4,7 @@
   "title": "App Hider",
   "description": "Hide selected Mac apps from normal app listings and restore them later.",
   "icon": "extension-icon.png",
-  "author": "local",
+  "author": "leonidalekseev",
   "license": "MIT",
   "platforms": [
     "macOS"
@@ -34,7 +34,7 @@
       "type": "checkbox",
       "required": false,
       "default": true,
-      "title": "Launchpad / Apps",
+      "title": "Launchpad",
       "label": "Refresh Launchpad after hiding or restoring",
       "description": "macOS 15 and older: resets Launchpad and restarts the Dock (Launchpad folders and icon order are reset). macOS 26 and newer: restarts Spotlight, which hosts the Apps view."
     }
@@ -54,6 +54,7 @@
     "dev": "ray develop",
     "build": "ray build -e dist",
     "lint": "ray lint",
-    "fix-lint": "ray lint --fix"
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
   }
 }
