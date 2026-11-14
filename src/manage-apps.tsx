@@ -533,9 +533,16 @@ export default function Command() {
     isLoading,
     error,
     revalidate,
-  } = usePromise(() => serialized(scanApps), [], {
-    onError: (err) => showFailureToast(err, { title: "Could not scan apps", message: errorMessage(err) }),
-  });
+  } = usePromise(
+    // Turn errors into readable text here: failureToastOptions.message only takes a fixed string,
+    // and the hook's toast shows the error's own message (keeping its Retry action).
+    () =>
+      serialized(scanApps).catch((err: unknown) => {
+        throw new Error(errorMessage(err));
+      }),
+    [],
+    { failureToastOptions: { title: "Could not scan apps" } },
+  );
 
   async function run(progress: string, success: string, failure: string, task: () => Promise<void>) {
     const toast = await showToast({ style: Toast.Style.Animated, title: progress });
