@@ -19,6 +19,10 @@
 
 App Hider moves selected `.app` bundles out of `/Applications` into a hidden, Spotlight-excluded folder in your home Library. It also removes them from LaunchServices and refreshes Launchpad. You can still launch hidden apps from Raycast, and restore them to their original location at any time.
 
+<p align="center">
+  <img src="assets/screenshot.png" width="760" alt="Manage Hidden Apps command in Raycast">
+</p>
+
 > [!IMPORTANT]
 > This is **concealment, not security**. Anyone with access to your user account can find hidden apps. For real access control, use a separate macOS account and FileVault.
 
