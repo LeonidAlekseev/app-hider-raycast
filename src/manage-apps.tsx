@@ -6,6 +6,7 @@ import {
   confirmAlert,
   getPreferenceValues,
   Icon,
+  Keyboard,
   List,
   showToast,
   Toast,
@@ -532,7 +533,6 @@ export default function Command() {
                 <Action
                   title="Restore App"
                   icon={Icon.Eye}
-                  shortcut={{ modifiers: ["cmd"], key: "r" }}
                   onAction={async () => {
                     const ok = await confirmAlert({
                       title: `Restore ${app.name}?`,
@@ -580,9 +580,7 @@ export default function Command() {
                     primaryAction: { title: "Remove", style: Alert.ActionStyle.Destructive },
                   });
                   if (!ok) return;
-                  await run("Removing record…", "Record removed", "Could not remove record", () =>
-                    removeRecord(app),
-                  );
+                  await run("Removing record…", "Record removed", "Could not remove record", () => removeRecord(app));
                 }}
               />
             )}
@@ -602,11 +600,11 @@ export default function Command() {
                 await run("Refreshing…", "App list refreshed", "Could not refresh", refreshAppLauncher);
               }}
             />
-            <Action.CopyToClipboard title="Copy Path" content={app.path} shortcut={{ modifiers: ["cmd"], key: "." }} />
+            <Action.CopyToClipboard title="Copy Path" content={app.path} shortcut={Keyboard.Shortcut.Common.CopyPath} />
             <Action
               title="Refresh List"
               icon={Icon.ArrowClockwise}
-              shortcut={{ modifiers: ["cmd", "shift"], key: "r" }}
+              shortcut={Keyboard.Shortcut.Common.Refresh}
               onAction={reload}
             />
           </ActionPanel>

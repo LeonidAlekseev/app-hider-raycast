@@ -87,12 +87,12 @@ Open Raycast and run **Manage Hidden Apps**. Apps are grouped into **Hidden**, *
 |---|---|---|
 | Hide App | <kbd>↵</kbd> | Visible apps |
 | Launch App | <kbd>↵</kbd> | Hidden apps |
-| Restore App | <kbd>⌘</kbd> <kbd>R</kbd> | Hidden apps |
+| Restore App | <kbd>⌘</kbd> <kbd>↵</kbd> | Hidden apps |
 | Show in Finder | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>F</kbd> | Hidden and visible apps |
 | Remove Record | <kbd>↵</kbd> | Missing apps |
-| Copy Path | <kbd>⌘</kbd> <kbd>.</kbd> | All |
+| Copy Path | <kbd>⌘</kbd> <kbd>K</kbd> menu | All |
 | Refresh Launchpad Now | <kbd>⌘</kbd> <kbd>K</kbd> menu | All |
-| Refresh List | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>R</kbd> | All |
+| Refresh List | <kbd>⌘</kbd> <kbd>R</kbd> | All |
 
 Hiding and restoring always ask for confirmation first.
 
